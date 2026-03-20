@@ -1,0 +1,15 @@
+[data-theme="retro"] {
+  --color-bg: #fff9f0;
+  --color-surface: #ffffff;
+  --color-surface-hover: #fff3e0;
+  --color-text: #1a1a1a;
+  --color-text-muted: #555555;
+  --color-primary: #ff6b6b;
+  --color-primary-hover: #ee5a5a;
+  --color-accent: #ffd93d;
+  --color-border: #111111;
+  --radius-card: 1rem;
+  --shadow-card: 4px 4px 0px #111111;
+  --shadow-card-hover: 6px 6px 0px #111111;
+  --border-card: 3px solid #111111;
+}

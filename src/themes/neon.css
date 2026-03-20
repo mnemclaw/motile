@@ -1,0 +1,29 @@
+[data-theme="neon"] {
+  --color-bg: #0a0a0f;
+  --color-surface: #111118;
+  --color-surface-hover: #1a1a24;
+  --color-text: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+  --color-primary: #00ff88;
+  --color-primary-hover: #00cc6e;
+  --color-accent: #ff0080;
+  --color-border: rgba(0, 255, 136, 0.2);
+  --radius-card: 0.5rem;
+  --shadow-card: 0 0 20px rgba(0, 255, 136, 0.1);
+  --shadow-card-hover: 0 0 30px rgba(0, 255, 136, 0.3);
+  --glow-primary: 0 0 20px rgba(0, 255, 136, 0.5);
+  --border-card: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+[data-theme="neon"] body {
+  background: #0a0a0f;
+}
+
+@keyframes neon-pulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 136, 0.3), 0 0 20px rgba(0, 255, 136, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(0, 255, 136, 0.5), 0 0 40px rgba(0, 255, 136, 0.3), 0 0 60px rgba(0, 255, 136, 0.1); }
+}
+
+[data-theme="neon"] .link-block:hover {
+  animation: neon-pulse 1.5s ease-in-out infinite;
+}

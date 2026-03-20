@@ -1,0 +1,20 @@
+[data-theme="gradient"] {
+  --color-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --color-surface: rgba(255, 255, 255, 0.15);
+  --color-surface-hover: rgba(255, 255, 255, 0.22);
+  --color-text: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.75);
+  --color-primary: #fbbf24;
+  --color-primary-hover: #f59e0b;
+  --color-border: rgba(255, 255, 255, 0.25);
+  --radius-card: 1rem;
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --border-card: 1px solid rgba(255, 255, 255, 0.25);
+  --backdrop-blur: blur(12px);
+}
+
+[data-theme="gradient"] body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}

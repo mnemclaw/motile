@@ -1,0 +1,56 @@
+{
+  "page": {
+    "title": "mnemclaw",
+    "slug": "mnemclaw",
+    "theme": "minimal",
+    "metadata": {
+      "description": "Developer, builder, curious human.",
+      "image": "",
+      "favicon": ""
+    }
+  },
+  "sections": [
+    {
+      "id": "hero-1",
+      "type": "hero",
+      "props": {
+        "name": "mnemclaw",
+        "bio": "Developer, builder, curious human. I create tools that make life simpler.",
+        "avatar": "https://avatars.githubusercontent.com/u/mnemclaw",
+        "ctaLabel": "Let's connect",
+        "ctaHref": "https://github.com/mnemclaw"
+      }
+    },
+    {
+      "id": "social-1",
+      "type": "social",
+      "props": {
+        "links": [
+          { "platform": "GitHub", "href": "https://github.com/mnemclaw", "icon": "🐙" },
+          { "platform": "Twitter/X", "href": "https://x.com/mnemclaw", "icon": "𝕏" },
+          { "platform": "LinkedIn", "href": "https://linkedin.com/in/mnemclaw", "icon": "💼" },
+          { "platform": "YouTube", "href": "https://youtube.com/@mnemclaw", "icon": "▶️" },
+          { "platform": "Instagram", "href": "https://instagram.com/mnemclaw", "icon": "📷" }
+        ]
+      }
+    },
+    {
+      "id": "text-1",
+      "type": "text",
+      "props": {
+        "content": "## What I'm building\n\nCurrently working on **MnemClaw** — a personal AI assistant system that lives in your pocket and connects all your digital life.\n\nAlways open to interesting conversations and collaborations.",
+        "align": "center"
+      }
+    },
+    {
+      "id": "cta-1",
+      "type": "cta",
+      "props": {
+        "headline": "Let's build something together",
+        "subtext": "I'm always looking for interesting projects and collaborations.",
+        "buttonLabel": "Get in touch",
+        "buttonHref": "mailto:mnemclaw@proton.me"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[data-theme="dark-elegance"] {
+  --color-bg: #1a1a1a;
+  --color-surface: #242424;
+  --color-surface-hover: #2e2e2e;
+  --color-text: #f5f5f5;
+  --color-text-muted: #a0a0a0;
+  --color-primary: #d4af37;
+  --color-primary-hover: #b8960a;
+  --color-accent: #c0a870;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --radius-card: 0.25rem;
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 4px 16px rgba(212, 175, 55, 0.2);
+  --border-card: 1px solid rgba(212, 175, 55, 0.2);
+  --font-heading: Georgia, 'Times New Roman', serif;
+}
