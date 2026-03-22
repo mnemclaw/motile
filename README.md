@@ -1,53 +1,141 @@
 # mnem-linkpage
 
-A world-class link-in-bio page builder. Create beautiful, animated link pages with a drag-drop visual editor. Static export — no backend required.
+A link-in-bio page builder with a drag-and-drop visual editor, animated themes, and zero backend. Edit in the browser, export a JSON file, deploy anywhere.
 
-## Tech Stack
+**Live demo → [mnemclaw.github.io/mnem-linkpage](https://mnemclaw.github.io/mnem-linkpage/)**
+**Visual editor → [mnemclaw.github.io/mnem-linkpage/edit](https://mnemclaw.github.io/mnem-linkpage/edit)**
 
-- React 19 + TypeScript (strict)
-- Vite + Tailwind CSS v4
-- Framer Motion + GSAP (animations)
-- Radix UI (accessible primitives)
-- Zustand (state management)
-- @hello-pangea/dnd (drag-drop)
+---
 
 ## Features
 
-- 6 built-in themes: Minimal, Glass, Neon, Retro, Dark Elegance, Gradient
-- Block types: Hero, Link, Link Grid, Social, Video (YouTube/Vimeo), CTA, Text (Markdown), Email Form
-- Visual drag-drop editor at `/edit`
-- Live preview while editing
-- Export `page.json` to save your config
-- Static export — deploy to Vercel or Netlify with zero config
+- **6 themes** — Minimal, Glass, Neon, Retro, Dark Elegance, Gradient
+- **8 block types** — Hero, Link, Link Grid, Social links, YouTube/Vimeo embed, CTA, Markdown text, Email form
+- **Visual drag-drop editor** — reorder blocks, edit content, switch themes, live preview
+- **Export/import** — save and restore your config as `page.json`
+- **No backend** — fully static, runs from a single HTML file
+- **Animated** — Framer Motion + GSAP transitions throughout
 
-## Getting Started
+---
+
+## Tech Stack
+
+| | |
+|---|---|
+| Framework | React 19 + TypeScript (strict) |
+| Build | Vite + Tailwind CSS v4 |
+| Animation | Framer Motion + GSAP |
+| UI primitives | Radix UI |
+| State | Zustand (localStorage persistence) |
+| Drag-drop | @hello-pangea/dnd |
+
+---
+
+## Local Development
 
 ```bash
+git clone https://github.com/mnemclaw/mnem-linkpage.git
+cd mnem-linkpage
 npm install
 npm run dev
 ```
 
-Then open:
-- `http://localhost:5173/` — public page
-- `http://localhost:5173/edit` — visual editor
+| URL | |
+|---|---|
+| `http://localhost:5173/` | Public page |
+| `http://localhost:5173/edit` | Visual editor |
 
-## Customizing Your Page
+---
 
-Edit `public/page.json` directly, or use the visual editor at `/edit`. Download your config via the Export button.
+## Customising Your Page
+
+### Option A — Visual editor
+
+Open `/edit`, make changes, click **Export**. This downloads your `page.json`. Replace `public/page.json` in the repo with it, then redeploy.
+
+### Option B — Edit JSON directly
+
+Edit `public/page.json`. The schema maps directly to what the editor produces:
+
+```jsonc
+{
+  "meta": { "title": "Your Name", "theme": "minimal" },
+  "sections": [
+    { "type": "hero", "name": "...", "bio": "...", "avatarUrl": "..." },
+    { "type": "link", "label": "My Project", "url": "https://..." },
+    { "type": "social", "links": [{ "platform": "github", "url": "..." }] }
+  ]
+}
+```
+
+---
+
+## Deploy to GitHub Pages
+
+The repo includes a GitHub Actions workflow that builds and deploys automatically on every push to `main`.
+
+### Fork and deploy
+
+1. Fork this repo
+2. Go to **Settings → Pages**
+3. Set source to **GitHub Actions** (or **Deploy from branch: gh-pages**)
+4. Update `base` in `vite.config.ts` to match your repo name:
+
+```ts
+// vite.config.ts
+base: '/<your-repo-name>/',
+```
+
+5. Push to `main` — the workflow handles the rest
+
+Your site will be live at `https://<your-username>.github.io/<your-repo-name>/`
+
+### Deploying to a custom domain or root path
+
+Set `base: '/'` in `vite.config.ts` and configure your domain in Settings → Pages.
+
+---
 
 ## Deploy to Vercel
 
+Vercel auto-detects Vite. No configuration needed for root deployments.
+
+1. Import the repo at [vercel.com/new](https://vercel.com/new)
+2. Set `base: '/'` in `vite.config.ts` (remove the `/mnem-linkpage/` path prefix)
+3. Deploy — Vercel handles builds on every push automatically
+
+**Or deploy from the CLI:**
+
 ```bash
+npm i -g vercel
 npm run build
-# Deploy the dist/ folder to Vercel or Netlify
+vercel --prod
 ```
 
-Or connect the GitHub repo to Vercel — it auto-detects Vite and deploys on push.
+---
 
-## TODO
+## Deploy to Netlify
 
-- [ ] Multi-item editor for Link Grid and Social sections (currently edit page.json directly)
-- [ ] Image upload for avatars
-- [ ] Custom domain / slug routing
+```bash
+npm run build
+# drag the dist/ folder to app.netlify.com/drop
+```
+
+Or connect the repo and set build command to `npm run build`, publish directory to `dist`.
+
+---
+
+## Roadmap
+
+- [ ] Multi-item editor for Link Grid and Social blocks (currently edit `page.json` directly)
+- [ ] Image upload for hero avatar
+- [ ] One-click Publish button (commits `page.json` to the repo via GitHub API)
 - [ ] Analytics (click tracking)
+- [ ] Custom domain / slug routing
 - [ ] Password-protected pages
+
+---
+
+## License
+
+MIT
