@@ -1,9 +1,9 @@
-# mnem-linkpage
+# motile
 
 A link-in-bio page builder with a drag-and-drop visual editor, animated themes, and zero backend. Edit in the browser, export a JSON file, deploy anywhere.
 
-**Live demo → [mnemclaw.github.io/mnem-linkpage](https://mnemclaw.github.io/mnem-linkpage/)**
-**Visual editor → [mnemclaw.github.io/mnem-linkpage/edit](https://mnemclaw.github.io/mnem-linkpage/edit)**
+**Live demo → [mnemclaw.github.io/motile](https://mnemclaw.github.io/motile/)**
+**Visual editor → [mnemclaw.github.io/motile/edit](https://mnemclaw.github.io/motile/edit)**
 
 ---
 
@@ -34,8 +34,8 @@ A link-in-bio page builder with a drag-and-drop visual editor, animated themes, 
 ## Local Development
 
 ```bash
-git clone https://github.com/mnemclaw/mnem-linkpage.git
-cd mnem-linkpage
+git clone https://github.com/mnemclaw/motile.git
+cd motile
 npm install
 npm run dev
 ```
@@ -101,7 +101,7 @@ Set `base: '/'` in `vite.config.ts` and configure your domain in Settings → Pa
 Vercel auto-detects Vite. No configuration needed for root deployments.
 
 1. Import the repo at [vercel.com/new](https://vercel.com/new)
-2. Set `base: '/'` in `vite.config.ts` (remove the `/mnem-linkpage/` path prefix)
+2. Set `base: '/'` in `vite.config.ts` (remove the `/motile/` path prefix)
 3. Deploy — Vercel handles builds on every push automatically
 
 **Or deploy from the CLI:**

@@ -50,7 +50,7 @@ export function EditorLayout() {
           >
             <div>
               <h1 style={{ margin: '0 0 var(--space-1)', fontSize: 'var(--text-lg)', fontWeight: 700, color: '#111827' }}>
-                mnem-linkpage
+                motile
               </h1>
               <p style={{ margin: 0, fontSize: 'var(--text-sm)', color: '#6b7280' }}>Visual Editor</p>
             </div>

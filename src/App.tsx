@@ -27,7 +27,7 @@ export default function App() {
   }
 
   // Route: /edit → editor, everything else → public page
-  // Use endsWith to work under any base path (dev: /edit, prod: /mnem-linkpage/edit)
+  // Use endsWith to work under any base path (dev: /edit, prod: /motile/edit)
   const isEditor = window.location.pathname.endsWith('/edit');
 
   if (isEditor) {

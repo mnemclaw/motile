@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/mnem-linkpage/',
+  base: '/motile/',
   build: {
     target: 'es2022',
     chunkSizeWarningLimit: 600,
