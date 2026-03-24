@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
+import { RollYourOwn } from '../atoms/RollYourOwn';
 import { HeroSection } from '../molecules/HeroSection';
 import { LinkBlock } from '../molecules/LinkBlock';
 import { LinkGrid } from './LinkGrid';
@@ -72,6 +73,7 @@ export function PageRenderer({ config }: PageRendererProps) {
           {sections.map((section, index) => renderSection(section, index))}
         </div>
       </motion.div>
+      <RollYourOwn />
     </AnimatePresence>
   );
 }
