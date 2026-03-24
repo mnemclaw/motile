@@ -49,31 +49,33 @@ export function PageRenderer({ config }: PageRendererProps) {
   }
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={page.theme}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.2 }}
-        data-theme={page.theme}
-        style={{
-          minHeight: '100vh',
-          background: 'var(--color-bg)',
-          ...inlineStyle,
-        }}
-      >
-        <div
+    <>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={page.theme}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          data-theme={page.theme}
           style={{
-            maxWidth: 640,
-            margin: '0 auto',
-            padding: '0 var(--space-4) var(--space-16)',
+            minHeight: '100vh',
+            background: 'var(--color-bg)',
+            ...inlineStyle,
           }}
         >
-          {sections.map((section, index) => renderSection(section, index))}
-        </div>
-      </motion.div>
+          <div
+            style={{
+              maxWidth: 640,
+              margin: '0 auto',
+              padding: '0 var(--space-4) var(--space-16)',
+            }}
+          >
+            {sections.map((section, index) => renderSection(section, index))}
+          </div>
+        </motion.div>
+      </AnimatePresence>
       <RollYourOwn />
-    </AnimatePresence>
+    </>
   );
 }
